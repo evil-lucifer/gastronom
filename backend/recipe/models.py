@@ -10,6 +10,8 @@ class Recipe(BaseModel):
     category = models.ForeignKey(Category, verbose_name='Категория', on_delete=models.SET_NULL, blank=True, null=True)
     national_cuisine = models.ForeignKey(NationalCuisine, verbose_name='Национальная кухня',
                                          on_delete=models.SET_NULL, blank=True, null=True)
+    description = models.CharField(verbose_name='Описание', default='')
+    cooking_time = models.IntegerField(verbose_name='Время приготовления', default=0)
 
     class Meta:
         verbose_name = 'Рецепт'

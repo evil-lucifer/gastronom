@@ -4,7 +4,7 @@ from base_model.models import BaseModel
 
 
 class Unit(BaseModel):
-    name = models.CharField(verbose_name='Название')
+    name = models.CharField(verbose_name='Название', unique=True)
 
     class Meta:
         verbose_name = 'Единица измерения'
